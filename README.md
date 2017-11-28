@@ -5,7 +5,7 @@ This project is the skeleton of a service that handles the attempts of the stude
 This service is implemented with Spring Boot and configured with two controllers as endpoints
  to implement the business logic required in the specs.
 
-As defined in the test description, this service must be decoupled from other services, 
+As defined in the [test description](Java-back-end-engineer-test-Contents.pdf), this service must be decoupled from other services, 
 for this reason, a stub of the `Book Structure Service` is provided, [StubBookStructureService](src/main/java/com/vicensvives/digital/javahiringtest/services/bookstructure/StubBookStructureService.java).
 
 This will help you to navigate through the structure of the books without having to think about it's model.
