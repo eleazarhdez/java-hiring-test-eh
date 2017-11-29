@@ -2,19 +2,13 @@ package com.vicensvives.digital.javahiringtest.controller.response;
 
 public final class CreateAttemptResponse {
 
-    private final int attemptGrade;
-    private final int activityGrade;
+    private final String attemptId;
 
-    public CreateAttemptResponse(int attemptGrade, int activityGrade) {
-        this.attemptGrade = attemptGrade;
-        this.activityGrade = activityGrade;
+    public CreateAttemptResponse(String attemptId) {
+        this.attemptId = attemptId;
     }
 
-    public int getAttemptGrade() {
-        return attemptGrade;
-    }
-
-    public int getActivityGrade() {
-        return activityGrade;
+    public String getAttemptId() {
+        return attemptId;
     }
 }

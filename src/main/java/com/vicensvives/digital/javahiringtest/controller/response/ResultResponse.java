@@ -1,14 +1,14 @@
 package com.vicensvives.digital.javahiringtest.controller.response;
 
-public final class GradeResponse {
+public final class ResultResponse {
 
     private final String userId;
-    private final String resourceId;
+    private final String activityId;
     private final int grade;
 
-    public GradeResponse(String userId, String resourceId, int grade) {
+    public ResultResponse(String userId, String activityId, int grade) {
         this.userId = userId;
-        this.resourceId = resourceId;
+        this.activityId = activityId;
         this.grade = grade;
     }
 
@@ -16,8 +16,8 @@ public final class GradeResponse {
         return userId;
     }
 
-    public String getResourceId() {
-        return resourceId;
+    public String getActivityId() {
+        return activityId;
     }
 
     public int getGrade() {
