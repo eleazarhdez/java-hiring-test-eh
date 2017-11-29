@@ -3,7 +3,7 @@
 This project is the skeleton of a service that handles the attempts of the students.
 
 This service is implemented with Spring Boot and configured with two controllers as endpoints
- to implement the business logic required in the specs.
+ to implement the business logic required in the [specs](Java-back-end-engineer-test-Contents.pdf).
 
 ## Configuration
 
