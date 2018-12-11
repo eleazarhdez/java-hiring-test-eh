@@ -6,16 +6,6 @@ public final class CreateAttemptRequest {
     private String activityId;
     private int grade;
 
-    //Required for Spring
-    public CreateAttemptRequest() {
-    }
-
-    public CreateAttemptRequest(String userId, String activityId, int grade) {
-        this.userId = userId;
-        this.activityId = activityId;
-        this.grade = grade;
-    }
-
     public String getUserId() {
         return userId;
     }
@@ -26,5 +16,20 @@ public final class CreateAttemptRequest {
 
     public int getGrade() {
         return grade;
+    }
+
+    public CreateAttemptRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+
+    public CreateAttemptRequest setActivityId(String activityId) {
+        this.activityId = activityId;
+        return this;
+    }
+
+    public CreateAttemptRequest setGrade(int grade) {
+        this.grade = grade;
+        return this;
     }
 }

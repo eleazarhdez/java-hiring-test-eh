@@ -26,4 +26,4 @@ The default port can be configured at the configuration file.
 
 ## API Doc
 
-As you could see, the API is documented with Swagger wich allows you to test the API using it's interface.
+As you can see, the API is documented with Swagger which allows you to test the API using it's interface.
