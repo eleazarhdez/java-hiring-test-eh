@@ -3,7 +3,9 @@
 This project is the skeleton of a service that handles the attempts of the students.
 
 This service is implemented with Spring Boot and configured with two controllers as endpoints
- to implement the business logic required in the [specs](Java-back-end-engineer-test-Contents.pdf).
+ to implement the business logic required in the [specs](Java-back-end-engineer-test.pdf).
+ 
+At the end of the test a final question might be answered in this [Markdown file](Final-question.md).
 
 ## Configuration
 
