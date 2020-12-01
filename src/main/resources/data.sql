@@ -1,5 +1,4 @@
 --DROP TABLE IF EXISTS attempts;
-
 	CREATE TABLE IF NOT EXISTS attempts (
 	  uuid VARCHAR(250) PRIMARY KEY,
 	  user_id VARCHAR(250) NOT NULL,
@@ -8,7 +7,6 @@
 	);
 
 --DROP TABLE IF EXISTS activity_stats;
-
     CREATE TABLE IF NOT EXISTS activity_stats (
       activity_id VARCHAR(250) NOT NULL,
       user_id VARCHAR(250) NOT NULL,
@@ -19,9 +17,3 @@
       comment VARCHAR(250),
       PRIMARY KEY (activity_id, user_id)
     );
-
---INSERT INTO attempts (uuid, user_id, activity_id, grade)
---    VALUES ('AAA-BBB-CCC','Ale', 'Mates', 5);
---	VALUES ('Ale', 1, 8),
---	VALUES ('Bebeto', 1, 7);
---	VALUES ('Ale', 2, 9);
