@@ -34,20 +34,14 @@ dependencies {
 	compile group: 'com.google.guava', name: 'guava', version: '23.0'
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
 	runtime group: 'com.h2database', name: 'h2'
-//	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.3.1'
-//	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.3.1'
-//	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.3.1'
-//	testCompile group: 'org.junit.platform', name: 'junit-platform-engine', version: '1.2.0'
-//	testImplementation 'org.junit.platform:junit-platform-commons:1.5.2'
-	testCompile ('org.junit.jupiter:junit-jupiter:5.6.0')
-//	testCompile('org.mockito:mockito-all:1.10.19')
-//	testCompile('org.mockito:mockito-core:2.21.0')
+
+	testCompile ('org.junit.jupiter:junit-jupiter:5.7.0')
+	testCompile('org.mockito:mockito-core:3.6.28')
 	testCompile "org.mockito:mockito-junit-jupiter:3.6.28"
 }
 
 test {
 	useJUnitPlatform()
-//	useTestNG()
 }
 
 compileJava.options.encoding = 'UTF-8'
