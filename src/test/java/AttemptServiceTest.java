@@ -1,3 +1,4 @@
+import com.vicensvives.digital.javahiringtest.exceptions.InvalidDataValueException;
 import com.vicensvives.digital.javahiringtest.model.Attempt;
 import com.vicensvives.digital.javahiringtest.repository.AttemptRepository;
 import com.vicensvives.digital.javahiringtest.service.AttemptService;
@@ -13,24 +14,31 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class AttemptServiceTest {
-//        AttemptService attemptService = new AttemptService();
-        @Mock
-        AttemptRepository attemptRepository;
 
-        @InjectMocks
-        AttemptService attemptService;
+    @Mock
+    AttemptRepository attemptRepository;
 
-        @Test
-        public void saveAttemptTest() {
-            Attempt mockedAttempt = Mockito.mock(Attempt.class);
-            AttemptRepository mockedAttemptRepository = Mockito.mock(AttemptRepository.class);
-            when(mockedAttempt.getUuid()).thenReturn("AAA-BBB");
-            when(mockedAttempt.getGrade()).thenReturn(90);
+    @InjectMocks
+    AttemptService attemptService;
 
-            when(mockedAttemptRepository.save(mockedAttempt)).thenReturn(mockedAttempt);
-            String uuid = attemptService.save(mockedAttempt).getUuid();
-            Assertions.assertEquals(uuid, mockedAttempt.getUser_id());
-            Assertions.assertEquals(1, 1);
+    @Test
+    public void saveAttemptTest() throws InvalidDataValueException {
+        Attempt mockedAttempt = Mockito.mock(Attempt.class);
+        when(mockedAttempt.getUuid()).thenReturn("AAA-BBB");
+        when(mockedAttempt.getGrade()).thenReturn(90);
 
-        }
+        when(attemptRepository.save(mockedAttempt)).thenReturn(mockedAttempt);
+        String uuid = attemptService.save(mockedAttempt).getUuid();
+        Assertions.assertEquals(uuid, mockedAttempt.getUuid());
+    }
+
+    @Test
+    public void tryAttemptWithInvalidGrade() throws InvalidDataValueException {
+        Attempt attempt = new Attempt();
+        attempt.setGrade(200);
+        AttemptService attemptService = new AttemptService();
+        Assertions.assertThrows(InvalidDataValueException.class, () -> {
+            attemptService.save(attempt);
+        });
+    }
 }
